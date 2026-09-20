@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Database Central</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg id="wires" aria-hidden="true"></svg>
+  <div id="tables"></div>
+
+  <div class="chrome top-right">
+    <div class="import-wrap">
+      <button type="button" id="import-btn" aria-label="Import" title="Import">
+        <span class="ic" data-ic="arrow-top"></span>
+      </button>
+      <div id="import-menu" class="menu" hidden>
+        <button type="button" data-import="file">Import CSV</button>
+        <button type="button" data-example="1nf">1st normal form</button>
+        <button type="button" data-example="2nf">2nd normal form</button>
+        <button type="button" data-example="3nf">3rd normal form</button>
+      </div>
+    </div>
+    <div class="export-wrap">
+      <button type="button" id="export-btn" aria-label="Export" title="Export">
+        <span class="ic" data-ic="save"></span>
+      </button>
+      <div id="export-menu" class="menu" hidden>
+        <button type="button" data-export="csv">CSV</button>
+        <button type="button" data-export="pdf">PDF</button>
+        <button type="button" data-export="png">PNG</button>
+      </div>
+    </div>
+    <input id="import-file" type="file" accept=".csv,text/csv" hidden>
+  </div>
+
+  <div class="chrome bottom-left">
+    <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">
+      <span class="ic" data-ic="zoom-out"></span>
+    </button>
+    <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">
+      <span class="ic" data-ic="zoom-in"></span>
+    </button>
+    <button type="button" id="zoom-reset" aria-label="Reset zoom" title="Reset zoom">
+      <span class="ic" data-ic="zoom"></span>
+    </button>
+    <button type="button" id="zoom-fit" aria-label="Fit all" title="Fit all">
+      <span class="ic" data-ic="crop"></span>
+    </button>
+  </div>
+
+  <button type="button" id="add-table" aria-label="Add table" title="Add table">
+    <span class="ic" data-ic="plus"></span>
+  </button>
+  <div id="note" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
